@@ -51,7 +51,8 @@ class SadTalker():
 
         # time_tag = str(uuid.uuid4())
         time_tag = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime())
-        save_dir = os.path.join(result_dir, time_tag)
+        job_id = str(uuid.uuid4())
+        save_dir = os.path.join(result_dir, job_id)
         os.makedirs(save_dir, exist_ok=True)
 
         input_dir = os.path.join(save_dir, 'input')
